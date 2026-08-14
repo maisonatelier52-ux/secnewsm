@@ -1,0 +1,46 @@
+[
+  {
+    "category": "us",
+    "title": "Multinational Supply Chains Shift Toward Nearshoring Alliances in North America",
+    "slug": "multinational-supply-chains-shift-toward-nearshoring-alliances",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&q=80",
+    "date": "December 14, 2026",
+    "shortdescription": "Domestic manufacturing hubs across North America see record capital expenditure and infrastructure funding.",
+    "description": [
+      {
+        "subtitle": "Industrial Expansion",
+        "text": "State governments partner with private energy providers to build resilient transport corridors."
+      }
+    ],
+    "author": {
+      "name": "Sarah Jenkins",
+      "role": "Business Analyst",
+      "bio": "Sarah covers markets and tech business strategies.",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80",
+      "slug": "sarah-jenkins",
+      "email": "sarah.jenkins@wiremingle.com"
+    }
+  },
+  {
+    "category": "us",
+    "title": "Customer Engagement Marketing: A New Standard for Retail Franchises",
+    "slug": "customer-engagement-marketing-a-new-standard-for-retail-franchises",
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=200&q=80",
+    "date": "December 13, 2026",
+    "shortdescription": "Omnichannel loyalty programs drive significant growth in national retail chains.",
+    "description": [
+      {
+        "subtitle": "Franchise Strategies",
+        "text": "Hyper-personalized messaging algorithms boost customer retention across US metropolitan centers."
+      }
+    ],
+    "author": {
+      "name": "Arianna Scott",
+      "role": "Senior Editor",
+      "bio": "Arianna specializes in enterprise growth and regional market shifts.",
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80",
+      "slug": "arianna-scott",
+      "email": "arianna.scott@wiremingle.com"
+    }
+  }
+]

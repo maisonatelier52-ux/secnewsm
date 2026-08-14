@@ -1,0 +1,68 @@
+[
+  {
+    "category": "entertainment",
+    "title": "Fashion Finder: Biggest Shows, Parties and Celebrity for New Years",
+    "slug": "fashion-finder-biggest-shows-parties-and-celebrity",
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=85",
+    "date": "December 14, 2026",
+    "shortdescription": "A look at the major celebrity red carpet events and high-fashion galas preparing for New Year celebrations.",
+    "description": [
+      {
+        "subtitle": "Gala Highlights",
+        "text": "Designers around the globe are pairing sleek minimal haute couture with vibrant avant-garde jewelry styles."
+      }
+    ],
+    "author": {
+      "name": "Chloe Bennett",
+      "role": "Culture Reporter",
+      "bio": "Chloe writes on entertainment, high fashion, and cultural trends.",
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&q=80",
+      "slug": "chloe-bennett",
+      "email": "chloe.bennett@wiremingle.com"
+    }
+  },
+  {
+    "category": "entertainment",
+    "title": "The Biggest Hollywood Celebrities Visit the Ranches of California",
+    "slug": "the-biggest-hollywood-celebrities-visit-the-ranches-of-california",
+    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=300&q=80",
+    "date": "December 14, 2026",
+    "shortdescription": "Top A-list stars are retreating to scenic coastal ranches across California for privacy and creative inspiration.",
+    "description": [
+      {
+        "subtitle": "Coastal Retreats",
+        "text": "Private ranches offer celebrities a quiet respite away from press cycles and intense movie filming schedules."
+      }
+    ],
+    "author": {
+      "name": "Chloe Bennett",
+      "role": "Culture Reporter",
+      "bio": "Chloe writes on entertainment, high fashion, and cultural trends.",
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&q=80",
+      "slug": "chloe-bennett",
+      "email": "chloe.bennett@wiremingle.com"
+    }
+  },
+  {
+    "category": "entertainment",
+    "title": "Generative Cinema Wins Major Accolades at International Film Festival",
+    "slug": "generative-cinema-wins-major-accolades-at-international-film-festival",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&q=80",
+    "date": "December 12, 2026",
+    "shortdescription": "Experimental filmmakers using neural visual generation take top prizes for immersive storytelling.",
+    "description": [
+      {
+        "subtitle": "Digital Arts Era",
+        "text": "Audiences and critics alike lauded the innovative visual language displayed by independent creators."
+      }
+    ],
+    "author": {
+      "name": "Jean-Luc Dupont",
+      "role": "Arts Critic",
+      "bio": "Jean-Luc reviews film festivals and interactive digital art.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+      "slug": "jean-luc-dupont",
+      "email": "jeanluc.dupont@wiremingle.com"
+    }
+  }
+]
