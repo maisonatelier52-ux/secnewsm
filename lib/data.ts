@@ -169,7 +169,7 @@ export const heroFeaturedTopicArticle: Article = {
   slug: "fashion-finder-biggest-shows-parties-and-celebrity-for-new-years",
   image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=85&auto=format&fit=crop",
   date: "December 14, 2026",
-  shortdescription: "Major red carpet events and high-fashion galas preparing for New Year celebrations.",
+  shortdescription: "Exclusive coverage of major red carpet galas, luxury designer debuts, and star-studded midnight parties preparing for global New Year celebrations across Paris, London, and New York.",
   description: [],
   author: {
     name: "Chloe Bennett",

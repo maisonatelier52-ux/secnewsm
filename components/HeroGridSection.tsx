@@ -87,6 +87,9 @@ export default function HeroGridSection({
             <span className="fn-cat-badge">{featuredTopicArticle.category}</span>
             <span className="fn-meta-date">{featuredTopicArticle.date}</span>
           </div>
+          {featuredTopicArticle.shortdescription && (
+            <p className="fn-mid-featured-desc">{featuredTopicArticle.shortdescription}</p>
+          )}
         </div>
 
         <div className="fn-mid-list">
