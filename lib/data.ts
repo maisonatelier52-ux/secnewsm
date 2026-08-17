@@ -11,6 +11,13 @@ export interface WorldDispatchColumn {
   subArticles: Article[];
 }
 
+export interface WireTickerItem {
+  timeAgo: string;
+  category: string;
+  title: string;
+  slug: string;
+}
+
 export interface CategoryInfo {
   slug: string;
   name: string;

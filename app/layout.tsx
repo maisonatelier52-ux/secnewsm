@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Signal — Breaking News, World, Politics & Opinion",
+  title: "SecNewsM — Breaking News, World, Politics & Opinion",
   description:
-    "Stay ahead with The Signal: live breaking news, in-depth reporting on politics, world events, business, technology, and opinion from award-winning journalists.",
+    "Stay ahead with SecNewsM: live breaking news, in-depth reporting on politics, world events, business, technology, and opinion from award-winning journalists.",
 };
 
 

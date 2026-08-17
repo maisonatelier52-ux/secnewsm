@@ -55,7 +55,7 @@ img {
   background-color: #ffffff;
   color: #171717;
   padding: 12px 0 0 0;
-  border-bottom: 1px solid #dc2626;
+  border-bottom: 1px solid #cccccc;
 }
 
 .fn-header-inner {
@@ -274,7 +274,7 @@ img {
 
 /* ── COLUMN 1 (LEFT) ─────────────────────────────────────── */
 .fn-col-left {
-  padding: 14px 20px 20px 0; /* Space at top of image matching mid & right cols */
+  padding: 22px 20px 20px 0; /* Space at top of image matching mid & right cols */
   border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
@@ -392,7 +392,7 @@ img {
 
 /* ── COLUMN 2 (MIDDLE) ────────────────────────────────────── */
 .fn-col-mid {
-  padding: 14px 20px 20px 20px;
+  padding: 22px 20px 20px 20px;
   border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
@@ -511,7 +511,7 @@ img {
 
 /* ── COLUMN 3 (RIGHT) ─────────────────────────────────────── */
 .fn-col-right {
-  padding: 14px 0 20px 20px;
+  padding: 22px 0 20px 20px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1898,7 +1898,7 @@ img {
 ════════════════════════════════════════════════════════════ */
 .fn-footer-wrapper {
   width: 100%;
-  background-color: var(--navy-bg);
+  background-color: #111111;
   color: #ffffff;
   padding-top: 40px;
   padding-bottom: 24px;
@@ -1916,7 +1916,7 @@ img {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 28px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   margin-bottom: 30px;
 }
 
@@ -1936,7 +1936,7 @@ img {
 
 .fn-footer-tagline {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #d4d4d4;
   font-weight: 500;
 }
 
@@ -1947,8 +1947,8 @@ img {
 }
 
 .fn-footer-newsletter-input {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #222225;
+  border: 1px solid #3a3a40;
   color: #ffffff;
   font-size: 13px;
   padding: 10px 16px;
@@ -1959,7 +1959,7 @@ img {
 }
 
 .fn-footer-newsletter-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: #a3a3a3;
 }
 
 .fn-footer-newsletter-input:focus {
@@ -1987,7 +1987,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   margin-bottom: 20px;
 }
 
@@ -2011,11 +2011,13 @@ img {
 
 .fn-footer-col-list a {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
+  color: #e5e5e5;
   font-weight: 500;
+  transition: color 0.15s;
 }
 
 .fn-footer-col-list a:hover {
+  color: var(--red);
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -2025,13 +2027,13 @@ img {
   align-items: center;
   justify-content: space-between;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.55);
+  color: #a3a3a3;
 }
 
 .fn-footer-back-top {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: #e5e5e5;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
@@ -2041,6 +2043,7 @@ img {
 }
 
 .fn-footer-back-top:hover {
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }

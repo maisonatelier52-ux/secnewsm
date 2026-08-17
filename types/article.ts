@@ -22,3 +22,10 @@ export interface Article {
   description: ArticleDescription[];
   author: ArticleAuthor;
 }
+
+export interface WireTickerItem {
+  timeAgo: string;
+  category: string;
+  title: string;
+  slug: string;
+}

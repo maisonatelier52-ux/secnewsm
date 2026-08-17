@@ -51,7 +51,7 @@ export default function Header({ activeCategory }: HeaderProps) {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2">
                 <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" />
               </svg>
-              20.9° • London
+              20.9° •
             </span>
           </div>
         </div>

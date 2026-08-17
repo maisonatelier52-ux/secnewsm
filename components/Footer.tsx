@@ -19,7 +19,7 @@ export default function Footer() {
               </svg>
             </div>
             <p className="fn-footer-tagline">
-              Independent Journalism & Global Market Intelligence Since 1998.
+              Independent Journalism & Global Market Intelligence .
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
 
         {/* Footer Bottom Row */}
         <div className="fn-footer-bottom">
-          <div>© 2026 FN News Media Group. All Rights Reserved.</div>
+          <div>© 2026 All Rights Reserved.</div>
           <button className="fn-footer-back-top" onClick={scrollToTop}>
             <span>Back to top</span>
             <span>↑</span>
