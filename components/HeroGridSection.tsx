@@ -109,13 +109,14 @@ export default function HeroGridSection({
         <h2 className="fn-right-header">Hot this week</h2>
 
         <div className="fn-hot-list">
-          {hotArticles.map((item, idx) => (
+          {hotArticles.slice(0, 5).map((item, idx) => (
             <div key={idx} className="fn-hot-item">
               <div className="fn-hot-content">
                 <div className="fn-hot-cat">{item.category}</div>
                 <h3 className="fn-hot-title">
                   {item.title}
                 </h3>
+                <div className="fn-hot-meta">{item.date || "3 hours ago · 4 min read"}</div>
               </div>
               <div className="fn-hot-num">{idx + 1}</div>
             </div>

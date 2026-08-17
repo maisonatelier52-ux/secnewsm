@@ -35,7 +35,9 @@ export default function ArticleDetailPage({ params }: DetailPageProps) {
               <span>/</span>
               <Link href={`/${categorySlug}`}>{article.category}</Link>
               <span>/</span>
-              <span>{slug}</span>
+              <span className="fn-art-breadcrumb-slug" title={slug}>
+                {slug}
+              </span>
             </div>
 
             <span className="fn-art-cat-badge">{article.category}</span>

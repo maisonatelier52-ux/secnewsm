@@ -61,6 +61,11 @@ export default function InvestigativeReportsSection({
                 <h4 className="fn-sec5-stack-title">
                   {item.title}
                 </h4>
+                {item.shortdescription && (
+                  <p className="fn-sec5-stack-desc">
+                    {item.shortdescription}
+                  </p>
+                )}
                 <span className="fn-sec5-stack-meta">
                   By {item.author.name} · {item.date}
                 </span>

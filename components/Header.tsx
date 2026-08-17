@@ -22,18 +22,20 @@ export default function Header({ activeCategory }: HeaderProps) {
         {/* Left Brand & Meta Box */}
         <div className="fn-header-brand-box">
           <Link href="/" className="fn-logo-box" aria-label="Home">
-            <svg className="fn-logo-triangle" viewBox="0 0 24 24" fill="#ffffff">
-              <polygon points="5,3 19,12 5,21" />
-            </svg>
+            <div className="fn-play-circle">
+              <svg width="12" height="14" viewBox="0 0 12 14" fill="#C5A059">
+                <polygon points="0,0 12,7 0,14" />
+              </svg>
+            </div>
           </Link>
 
           <div className="fn-header-meta">
             <span className="fn-header-date">Tuesday, June 18, 2026</span>
             <span className="fn-header-weather">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C5A059" strokeWidth="2">
                 <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" />
               </svg>
-              20.9 ° London
+              20.9° • London
             </span>
           </div>
         </div>
@@ -43,10 +45,13 @@ export default function Header({ activeCategory }: HeaderProps) {
           {/* Top Row: About Us Links */}
           <div className="fn-header-top-tools">
             <div className="fn-header-links">
-              <a href="#">ABOUT US</a>
-              <a href="#">CONTACT</a>
-              <a href="#">CAREERS</a>
-              <a href="#">PRIVACY POLICY</a>
+              <a href="#">About Us</a>
+              <span>|</span>
+              <a href="#">Contact</a>
+              <span>|</span>
+              <a href="#">Careers</a>
+              <span>|</span>
+              <a href="#">Privacy Policy</a>
             </div>
           </div>
 

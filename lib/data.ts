@@ -602,6 +602,246 @@ export const opinionArticles: Article[] = [
   }
 ];
 
+// ── Homepage Section 3: World Dispatches Data ───────────────────
+export const worldDispatchColumns: WorldDispatchColumn[] = [
+  {
+    header: "EUROPE & UK",
+    leadArticle: {
+      category: "EUROPE",
+      title: "European Union Unveils Comprehensive Clean Energy Infrastructure Pact",
+      slug: "central-banks-accelerate-sovereign-digital-assets-in-international-trade",
+      image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80&auto=format&fit=crop",
+      date: "August 12, 2026",
+      shortdescription: "Member states commit to cross-border grid integration and green hydrogen corridors across Western Europe.",
+      description: [],
+      author: { name: "Sarah Jenkins", role: "European Correspondent", bio: "", image: "", slug: "sarah-jenkins", email: "" }
+    },
+    subArticles: [
+      {
+        category: "UK",
+        title: "London Tech Hub Reports Record Venture Capital Inflow for Q3",
+        slug: "major-tech-firms-announce-joint-ai-safety-initiative",
+        image: "",
+        date: "3 min read",
+        shortdescription: "",
+        description: [],
+        author: { name: "", role: "", bio: "", image: "", slug: "", email: "" }
+      },
+      {
+        category: "NORDICS",
+        title: "Scandinavian Off-Shore Wind Farms Exceed Annual Output Goals",
+        slug: "next-generation-solar-grids-achieve-unprecedented-conversion-efficiency",
+        image: "",
+        date: "5 min read",
+        shortdescription: "",
+        description: [],
+        author: { name: "", role: "", bio: "", image: "", slug: "", email: "" }
+      }
+    ]
+  },
+  {
+    header: "AMERICAS",
+    leadArticle: {
+      category: "AMERICAS",
+      title: "North American Supply Chains Pivot to Regional Automation Hubs",
+      slug: "kansas-city-has-a-massive-array-of-big-national-companies",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80&auto=format&fit=crop",
+      date: "August 11, 2026",
+      shortdescription: "Enterprise manufacturing centers relocate key production facilities closer to domestic consumer markets.",
+      description: [],
+      author: { name: "David Chen", role: "Markets Analyst", bio: "", image: "", slug: "david-chen", email: "" }
+    },
+    subArticles: [
+      {
+        category: "US",
+        title: "Federal Reserve Signals Stabilized Interest Rate Outlook for Fall",
+        slug: "customer-engagement-marketing-a-new",
+        image: "",
+        date: "4 min read",
+        shortdescription: "",
+        description: [],
+        author: { name: "", role: "", bio: "", image: "", slug: "", email: "" }
+      },
+      {
+        category: "LATAM",
+        title: "Brazil's Agri-Tech Startups Attract Major Global Investment Funds",
+        slug: "global-markets-surge-as-innovation-hubs-expand-footprint",
+        image: "",
+        date: "2 min read",
+        shortdescription: "",
+        description: [],
+        author: { name: "", role: "", bio: "", image: "", slug: "", email: "" }
+      }
+    ]
+  },
+  {
+    header: "ASIA PACIFIC",
+    leadArticle: {
+      category: "ASIA PACIFIC",
+      title: "Tokyo and Seoul Launch Joint Quantum Computing Testbed Network",
+      slug: "quantum-encryption-breakthroughs-set-new-standard-for-global-cyber-defense",
+      image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&q=80&auto=format&fit=crop",
+      date: "August 10, 2026",
+      shortdescription: "Leading research institutes establish ultra-low-latency fiber interconnects for multi-node quantum experiments.",
+      description: [],
+      author: { name: "Kenji Sato", role: "East Asia Bureau", bio: "", image: "", slug: "kenji-sato", email: "" }
+    },
+    subArticles: [
+      {
+        category: "JAPAN",
+        title: "Subterranean Infrastructure Resilience Initiative Expands in Osaka",
+        slug: "inside-tokyos-subterranean-underground-flood-prevention-system",
+        image: "",
+        date: "4 min read",
+        shortdescription: "",
+        description: [],
+        author: { name: "", role: "", bio: "", image: "", slug: "", email: "" }
+      },
+      {
+        category: "SINGAPORE",
+        title: "Singapore Digital Harbor Hub Automates Maritime Logistics Port",
+        slug: "multinational-supply-chains-shift-toward-nearshoring-alliances",
+        image: "",
+        date: "3 min read",
+        shortdescription: "",
+        description: [],
+        author: { name: "", role: "", bio: "", image: "", slug: "", email: "" }
+      }
+    ]
+  },
+  {
+    header: "MIDDLE EAST & AFRICA",
+    leadArticle: {
+      category: "MIDDLE EAST",
+      title: "Solar Megaprojects Power Zero-Carbon Industrial Zones across Gulf",
+      slug: "urban-micro-forests-how-metropolises-are-beating-rising-summer-heatwaves",
+      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=600&q=80",
+      date: "August 09, 2026",
+      shortdescription: "Massive photovoltaic installations supply continuous clean energy for desalinization and heavy manufacturing.",
+      description: [],
+      author: { name: "Dr. Elena Rostova", role: "Energy Analyst", bio: "", image: "", slug: "elena-rostova", email: "" }
+    },
+    subArticles: [
+      {
+        category: "UAE",
+        title: "Dubai Financial District Expands Innovation Hub for FinTech Scaleups",
+        slug: "social-media-marketing-for-franchises-is-meant",
+        image: "",
+        date: "5 min read",
+        shortdescription: "",
+        description: [],
+        author: { name: "", role: "", bio: "", image: "", slug: "", email: "" }
+      },
+      {
+        category: "AFRICA",
+        title: "Pan-African Mobile Payment Networks Reach Unprecedented Interoperability",
+        slug: "central-banks-accelerate-sovereign-digital-assets-in-international-trade",
+        image: "",
+        date: "3 min read",
+        shortdescription: "",
+        description: [],
+        author: { name: "", role: "", bio: "", image: "", slug: "", email: "" }
+      }
+    ]
+  }
+];
+
+// ── Homepage Section 6: Visual Essays & Culture Spotlight Data ────
+export const visualEssayLeadArticle: Article = {
+  category: "PHOTOJOURNALISM ESSAY",
+  title: "Preserving Heritage: Documenting the Forgotten Architecture of Ancient Silk Road Cities",
+  slug: "the-biggest-hollywood-celebrities-visit-the-ranches-of-california",
+  image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1200&q=85&auto=format&fit=crop",
+  date: "August 14, 2026",
+  shortdescription: "A 10,000-mile visual expedition capturing century-old mudbrick domes, intricate tile mosaics, and the resilient master artisans keeping ancient craftsmanship alive. Traversing high mountain passes and remote desert oases across Central Asia, our field photojournalists document endangered architectural monuments, traditional earth-building conservation techniques, and the living cultural legacy of historic Silk Road trading hubs. Through archival-grade high-resolution photography and intimate interviews with elder stonemasons, this special series unveils forgotten urban sanctuaries, sacred geometric tilework, and the urgent international preservation initiatives fighting against environmental weathering and urban encroachment before these ancient wonders fade into history.",
+  description: [],
+  author: {
+    name: "Dr. Elena Rostova",
+    role: "Chief Photojournalist",
+    bio: "",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80",
+    slug: "elena-rostova",
+    email: ""
+  }
+};
+
+export const visualEssaySecondaryArticles: Article[] = [
+  {
+    category: "CULTURE & HERITAGE",
+    title: "Minimalism in Kyoto: The Evolution of Traditional Wooden Machiya Townhouses",
+    slug: "fashion-finder-biggest-shows-parties-and-celebrity-for-new-years",
+    image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80&auto=format&fit=crop",
+    date: "6 min read",
+    shortdescription: "How young architects in Kyoto are restoring historic wooden structures into ultra-sustainable modern living sanctuaries.",
+    description: [],
+    author: { name: "Kenji Sato", role: "Cultural Essayist", bio: "", image: "", slug: "kenji-sato", email: "" }
+  },
+  {
+    category: "WILDLIFE EXPEDITION",
+    title: "Tracking High Altitude Fauna Across the Himalayan Glacial Basins",
+    slug: "10-things-you-should-know-before-you-visit-south-americas-jungles",
+    image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600&q=80&auto=format&fit=crop",
+    date: "8 min read",
+    shortdescription: "Field notebooks and telephoto observations from wildlife conservationists traversing 18,000-foot mountain passes.",
+    description: [],
+    author: { name: "Marco Silva", role: "Expedition Field Lead", bio: "", image: "", slug: "marco-silva", email: "" }
+  },
+  {
+    category: "SOUND & DESIGN",
+    title: "Analog Craft: Why Vinyl Presses and Mechanical Watches Flourish in Berlin",
+    slug: "generative-cinema-wins-major-accolades-at-international-film-festival",
+    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80&auto=format&fit=crop",
+    date: "5 min read",
+    shortdescription: "In an increasingly algorithmic world, a new generation of artisans is choosing tactile precision and analog audio dynamics.",
+    description: [],
+    author: { name: "Chloe Bennett", role: "Arts Correspondent", bio: "", image: "", slug: "chloe-bennett", email: "" }
+  }
+];
+
+// ── Homepage Section 7: Special Features & Highlights Data ─────────
+export const specialFeatureArticles: Article[] = [
+  {
+    category: "GLOBAL MARKETS",
+    title: "Sovereign Wealth Funds Allocate Record Capital Toward Subsea Fiber Interconnects",
+    slug: "global-markets-surge-as-innovation-hubs-expand-footprint",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80&auto=format&fit=crop",
+    date: "August 14, 2026",
+    shortdescription: "Cross-border capital allocations accelerate intercontinental power grid and high-speed data communications routes.",
+    description: [],
+    author: { name: "David Chen", role: "Markets Editor", bio: "", image: "", slug: "david-chen", email: "" }
+  },
+  {
+    category: "DEEP TECH",
+    title: "Next-Generation Semiconductor Foundries Reach High-Yield Production Benchmarks",
+    slug: "new-technology-will-help-keep-your-smart-home-from-becoming-obsolete",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&auto=format&fit=crop",
+    date: "August 13, 2026",
+    shortdescription: "Advanced lithography systems enable unprecedented energy efficiency for frontier artificial intelligence hardware.",
+    description: [],
+    author: { name: "Dr. Alex Mercer", role: "Tech Analyst", bio: "", image: "", slug: "alex-mercer", email: "" }
+  },
+  {
+    category: "BIOTECH & HEALTH",
+    title: "Precision Micro-Nutrient Therapy Receives Global Regulatory Approvals",
+    slug: "personalized-micro-nutrient-therapy-receives-global-regulatory-clearance",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80&auto=format&fit=crop",
+    date: "August 12, 2026",
+    shortdescription: "Clinical consortiums validate personalized cellular longevity protocols across international research centers.",
+    description: [],
+    author: { name: "Sarah Jenkins", role: "Biotech Editor", bio: "", image: "", slug: "sarah-jenkins", email: "" }
+  },
+  {
+    category: "SUSTAINABILITY",
+    title: "Commercial Offshore Wind Networks Achieve Historic Annual Output Milestones",
+    slug: "next-generation-solar-grids-achieve-unprecedented-conversion-efficiency",
+    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80&auto=format&fit=crop",
+    date: "August 11, 2026",
+    shortdescription: "High-capacity turbine arrays supply continuous clean baseload energy for metropolitan power grids across Western Europe.",
+    description: [],
+    author: { name: "Marco Silva", role: "Energy Lead", bio: "", image: "", slug: "marco-silva", email: "" }
+  }
+];
+
 // ── Homepage Section 5: Investigative Reports Data ─────────────
 export const investigativeLeadArticle: Article = {
   category: "FEATURED INVESTIGATION",
@@ -628,7 +868,7 @@ export const investigativeStackArticles: Article[] = [
     slug: "inside-tokyos-subterranean-underground-flood-prevention-system",
     image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=400&q=80&auto=format&fit=crop",
     date: "5 min read",
-    shortdescription: "",
+    shortdescription: "An engineering marvel hidden 50 meters below Tokyo, featuring massive subterranean silos and surge tanks designed to divert catastrophic typhoon floodwaters.",
     description: [],
     author: { name: "Kenji Sato", role: "", bio: "", image: "", slug: "kenji-sato", email: "" }
   },
@@ -638,7 +878,7 @@ export const investigativeStackArticles: Article[] = [
     slug: "the-craftsmanship-behind-century-old-high-precision-swiss-watchmaking",
     image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&q=80&auto=format&fit=crop",
     date: "4 min read",
-    shortdescription: "",
+    shortdescription: "Inside traditional Vallée de Joux ateliers where master watchmakers hand-craft micro-mechanical complications with sub-micron precision.",
     description: [],
     author: { name: "Claire Dubois", role: "", bio: "", image: "", slug: "claire-dubois", email: "" }
   },
@@ -648,7 +888,7 @@ export const investigativeStackArticles: Article[] = [
     slug: "autonomous-deep-sea-robotics-mapping-abyssal-thermal-vents",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80&auto=format&fit=crop",
     date: "4 min read",
-    shortdescription: "",
+    shortdescription: "Next-generation subsea robotic fleets explore uncharted hydrothermal vent ecosystems and seabed geothermal activity miles beneath the ocean surface.",
     description: [],
     author: { name: "Dr. Elena Rostova", role: "", bio: "", image: "", slug: "elena-rostova", email: "" }
   }
