@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -38,44 +39,41 @@ export default function Footer() {
           <div>
             <h4 className="fn-footer-col-title">News Sections</h4>
             <ul className="fn-footer-col-list">
-              <li><a href="#">World News</a></li>
-              <li><a href="#">Business & Markets</a></li>
-              <li><a href="#">Tech & Innovation</a></li>
-              <li><a href="#">Lifestyle & Culture</a></li>
-              <li><a href="#">Travel & Food</a></li>
+              <li><Link href="/us">US & Global News</Link></li>
+              <li><Link href="/business">Business & Markets</Link></li>
+              <li><Link href="/technology">Tech & Innovation</Link></li>
+              <li><Link href="/lifestyle">Lifestyle & Culture</Link></li>
+              <li><Link href="/travel">Travel & Food</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="fn-footer-col-title">Analysis & Opinion</h4>
+            <h4 className="fn-footer-col-title">About & Newsroom</h4>
             <ul className="fn-footer-col-list">
-              <li><a href="#">Editorial Selection</a></li>
-              <li><a href="#">Special Briefings</a></li>
-              <li><a href="#">Audio Podcasts</a></li>
-              <li><a href="#">Data Lab Investigations</a></li>
-              <li><a href="#">Photo Essays</a></li>
+              <li><Link href="/about-us">About Us</Link></li>
+              <li><Link href="/our-team">Our Team</Link></li>
+              <li><Link href="/ownership-and-funding">Ownership & Funding</Link></li>
+              <li><Link href="/editorial-policy">Editorial Policy</Link></li>
+              <li><Link href="/contact">Contact Newsroom</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="fn-footer-col-title">Company & Press</h4>
+            <h4 className="fn-footer-col-title">Standards & Guidelines</h4>
             <ul className="fn-footer-col-list">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Editorial Board</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Press Room</a></li>
-              <li><a href="#">Contact Newsroom</a></li>
+              <li><Link href="/source-methodology">Source Methodology</Link></li>
+              <li><Link href="/right-of-reply-policy">Right of Reply Policy</Link></li>
+              <li><Link href="/advertising-and-sponsored-policy">Advertising & Sponsored Policy</Link></li>
+              <li><Link href="/faq">Frequently Asked Questions</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="fn-footer-col-title">Policies & Legal</h4>
+            <h4 className="fn-footer-col-title">Legal & Compliance</h4>
             <ul className="fn-footer-col-list">
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Cookie Preferences</a></li>
-              <li><a href="#">Ethics & Corrections</a></li>
-              <li><a href="#">Sitemap</a></li>
+              <li><Link href="/terms-and-conditions">Terms and Conditions</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link href="/legal">Legal Disclosures</Link></li>
             </ul>
           </div>
         </div>

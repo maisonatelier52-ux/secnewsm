@@ -50,14 +50,16 @@ export default function ArticleDetailPage({ params }: DetailPageProps) {
             <div className="fn-art-meta-row">
               <div className="fn-art-author-info">
                 {article.author?.image && (
-                  <div className="fn-art-author-avatar-lg">
+                  <Link href={`/author/${article.author.slug || "sarah-jenkins"}`} className="fn-art-author-avatar-lg">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={article.author.image} alt={article.author.name} />
-                  </div>
+                  </Link>
                 )}
                 <div>
                   <div className="fn-art-author-name">
-                    <span>{article.author?.name || "Sarah Jenkins"}</span>
+                    <Link href={`/author/${article.author?.slug || "sarah-jenkins"}`}>
+                      {article.author?.name || "Sarah Jenkins"}
+                    </Link>
                   </div>
                   <div className="fn-art-author-role">{article.author?.role || "Editorial Analyst"}</div>
                 </div>
@@ -165,13 +167,15 @@ export default function ArticleDetailPage({ params }: DetailPageProps) {
               {article.author && (
                 <div className="fn-art-minimal-author">
                   {article.author.image && (
-                    <div className="fn-art-minimal-author-avatar">
+                    <Link href={`/author/${article.author.slug || "sarah-jenkins"}`} className="fn-art-minimal-author-avatar">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={article.author.image} alt={article.author.name} />
-                    </div>
+                    </Link>
                   )}
                   <div>
-                    <div className="fn-art-minimal-author-name">{article.author.name}</div>
+                    <Link href={`/author/${article.author.slug || "sarah-jenkins"}`}>
+                      <div className="fn-art-minimal-author-name">{article.author.name}</div>
+                    </Link>
                     <div className="fn-art-minimal-author-bio">
                       {article.author.role || "Senior Editorial Analyst"}
                     </div>

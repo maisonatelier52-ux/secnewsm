@@ -63,15 +63,6 @@ export default function HeroGridSection({
 
       {/* Column 2: Middle Topics & News (4.0fr) */}
       <div className="fn-col-mid">
-        <div className="fn-topics-bar">
-          <span className="fn-topics-title">Topics</span>
-          <div className="fn-topics-list">
-            <span>Strategy</span>
-            <span>Marketing</span>
-            <span>More ▾</span>
-          </div>
-        </div>
-
         <div className="fn-mid-featured">
           <div className="fn-mid-featured-img">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -99,7 +90,6 @@ export default function HeroGridSection({
                 {item.title}
               </h3>
               <div className="fn-mid-item-meta">
-                <span className="fn-cat-badge">{item.category}</span>
                 <span className="fn-meta-date">{item.date}</span>
               </div>
             </div>

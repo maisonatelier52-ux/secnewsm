@@ -9,6 +9,30 @@ interface HeaderProps {
 
 export default function Header({ activeCategory }: HeaderProps) {
   const [currentDate, setCurrentDate] = React.useState<string>("Tuesday, June 18, 2026");
+  const [trendingIndex, setTrendingIndex] = React.useState<number>(0);
+
+  const trendingItems = [
+    {
+      category: "BUSINESS",
+      title: "Major Tech Firms Announce Joint AI Safety Alliance Framework",
+      slug: "/business/major-tech-firms-announce-joint-ai-safety-initiative",
+    },
+    {
+      category: "TECH",
+      title: "Quantum Encryption Breakthroughs Set New Standard for Global Cyber Defense",
+      slug: "/technology/quantum-encryption-breakthroughs-set-new-standard-for-global-cyber-defense",
+    },
+    {
+      category: "WORLD",
+      title: "Central Banks Accelerate Sovereign Digital Assets in International Clearance",
+      slug: "/world/central-banks-accelerate-sovereign-digital-assets-in-international-trade",
+    },
+    {
+      category: "US NEWS",
+      title: "Multinational Supply Chains Shift Toward Nearshoring Hubs in North America",
+      slug: "/us/multinational-supply-chains-shift-toward-nearshoring-alliances",
+    },
+  ];
 
   React.useEffect(() => {
     const now = new Date();
@@ -19,7 +43,13 @@ export default function Header({ activeCategory }: HeaderProps) {
       year: "numeric",
     });
     setCurrentDate(formattedDate);
-  }, []);
+
+    const timer = setInterval(() => {
+      setTrendingIndex((prev) => (prev + 1) % trendingItems.length);
+    }, 4500);
+
+    return () => clearInterval(timer);
+  }, [trendingItems.length]);
 
   const categories = [
     { slug: "business", label: "Business" },
@@ -29,8 +59,50 @@ export default function Header({ activeCategory }: HeaderProps) {
     { slug: "technology", label: "Tech" },
   ];
 
+  const handlePrevTrending = () => {
+    setTrendingIndex((prev) => (prev - 1 + trendingItems.length) % trendingItems.length);
+  };
+
+  const handleNextTrending = () => {
+    setTrendingIndex((prev) => (prev + 1) % trendingItems.length);
+  };
+
+  const currentTrending = trendingItems[trendingIndex];
+
   return (
     <header className="fn-header-wrapper">
+      {/* ── TOP TRENDING NEWS BAR (PREMIUM REDESIGN) ── */}
+      <div className="fn-top-trending-bar">
+        <div className="fn-top-trending-inner">
+          <div className="fn-trending-badge-new">
+            <span className="fn-trending-pulse" />
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+            <span>BREAKING NEWS</span>
+          </div>
+
+          <div className="fn-trending-ticker-container">
+            <div className="fn-trending-ticker">
+              <Link href={currentTrending.slug} className="fn-trending-link-new">
+                {currentTrending.title}
+              </Link>
+            </div>
+          </div>
+
+          {/* Right End: Date Display */}
+          <div className="fn-trending-date-box-new">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            <span className="fn-trending-date-text">{currentDate}</span>
+          </div>
+        </div>
+      </div>
+
       <div className="fn-header-inner">
         {/* Left Brand & Meta Box */}
         <div className="fn-header-brand-box">
@@ -43,17 +115,8 @@ export default function Header({ activeCategory }: HeaderProps) {
                 <path d="M10 6h8v4h-8V6Z" />
               </svg>
             </div>
+            <span className="fn-logo-text">Domain Name</span>
           </Link>
-
-          <div className="fn-header-meta">
-            <span className="fn-header-date">{currentDate}</span>
-            <span className="fn-header-weather">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2">
-                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z" />
-              </svg>
-              20.9° •
-            </span>
-          </div>
         </div>
 
         {/* Right Side Box */}
@@ -61,13 +124,13 @@ export default function Header({ activeCategory }: HeaderProps) {
           {/* Top Row: About Us Links */}
           <div className="fn-header-top-tools">
             <div className="fn-header-links">
-              <a href="#">About Us</a>
+              <Link href="/about-us">About Us</Link>
               <span>|</span>
-              <a href="#">Contact</a>
+              <Link href="/contact">Contact</Link>
               <span>|</span>
-              <a href="#">Careers</a>
+              <Link href="/our-team">Our Team</Link>
               <span>|</span>
-              <a href="#">Privacy Policy</a>
+              <Link href="/privacy-policy">Privacy Policy</Link>
             </div>
           </div>
 
