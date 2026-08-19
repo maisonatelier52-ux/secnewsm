@@ -10,6 +10,7 @@ interface HeaderProps {
 export default function Header({ activeCategory }: HeaderProps) {
   const [currentDate, setCurrentDate] = React.useState<string>("Tuesday, June 18, 2026");
   const [trendingIndex, setTrendingIndex] = React.useState<number>(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState<boolean>(false);
 
   const trendingItems = [
     {
@@ -59,19 +60,13 @@ export default function Header({ activeCategory }: HeaderProps) {
     { slug: "technology", label: "Tech" },
   ];
 
-  const handlePrevTrending = () => {
-    setTrendingIndex((prev) => (prev - 1 + trendingItems.length) % trendingItems.length);
-  };
-
-  const handleNextTrending = () => {
-    setTrendingIndex((prev) => (prev + 1) % trendingItems.length);
-  };
-
   const currentTrending = trendingItems[trendingIndex];
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
     <header className="fn-header-wrapper">
-      {/* ── TOP TRENDING NEWS BAR (PREMIUM REDESIGN) ── */}
+      {/* ── TOP TRENDING NEWS BAR ── */}
       <div className="fn-top-trending-bar">
         <div className="fn-top-trending-inner">
           <div className="fn-trending-badge-new">
@@ -90,7 +85,6 @@ export default function Header({ activeCategory }: HeaderProps) {
             </div>
           </div>
 
-          {/* Right End: Date Display */}
           <div className="fn-trending-date-box-new">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -103,8 +97,9 @@ export default function Header({ activeCategory }: HeaderProps) {
         </div>
       </div>
 
+      {/* ── DESKTOP: LOGO + NAV ROW ── */}
       <div className="fn-header-inner">
-        {/* Left Brand & Meta Box */}
+        {/* Logo */}
         <div className="fn-header-brand-box">
           <Link href="/" className="fn-logo-box" aria-label="Home">
             <div className="fn-play-circle">
@@ -119,7 +114,7 @@ export default function Header({ activeCategory }: HeaderProps) {
           </Link>
         </div>
 
-        {/* Right Side Box */}
+        {/* Right Side (desktop) */}
         <div className="fn-header-right-box">
           {/* Top Row: About Us Links */}
           <div className="fn-header-top-tools">
@@ -134,29 +129,32 @@ export default function Header({ activeCategory }: HeaderProps) {
             </div>
           </div>
 
-          {/* Bottom Row: Main Category Nav */}
+          {/* Bottom Row: Category Nav + Hamburger + Subscribe */}
           <div className="fn-header-main-nav">
             <ul className="fn-nav-list">
               <li className={`fn-nav-item ${!activeCategory ? "active" : ""}`}>
                 <Link href="/">Home</Link>
               </li>
-
               {categories.map((cat) => {
                 const isActive =
                   activeCategory?.toLowerCase() === cat.slug ||
                   (activeCategory?.toLowerCase() === "tech" && cat.slug === "technology");
                 return (
                   <li key={cat.slug} className={`fn-nav-item ${isActive ? "active" : ""}`}>
-                    <Link href={`/${cat.slug}`}>
-                      {cat.label}
-                    </Link>
+                    <Link href={`/${cat.slug}`}>{cat.label}</Link>
                   </li>
                 );
               })}
             </ul>
 
             <div className="fn-header-actions">
-              <button className="fn-hamburger-btn" aria-label="Menu">
+              <button
+                id="fn-hamburger-btn"
+                className={`fn-hamburger-btn ${mobileMenuOpen ? "is-open" : ""}`}
+                aria-label="Menu"
+                aria-expanded={mobileMenuOpen}
+                onClick={() => setMobileMenuOpen((prev) => !prev)}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -165,6 +163,106 @@ export default function Header({ activeCategory }: HeaderProps) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* ── MOBILE HEADER (logo row + scrollable nav row) ── */}
+      <div className="fn-mobile-header-bar">
+        {/* Row 1: Logo + Hamburger */}
+        <div className="fn-mobile-top-row">
+          <Link href="/" className="fn-logo-box" aria-label="Home">
+            <div className="fn-play-circle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
+                <path d="M18 14h-8" />
+                <path d="M15 18h-5" />
+                <path d="M10 6h8v4h-8V6Z" />
+              </svg>
+            </div>
+            <span className="fn-logo-text">Domain Name</span>
+          </Link>
+
+          <button
+            id="fn-hamburger-btn-mobile"
+            className={`fn-hamburger-btn ${mobileMenuOpen ? "is-open" : ""}`}
+            aria-label="Menu"
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        {/* Row 2: Scrollable category nav */}
+        <nav className="fn-mobile-cat-nav">
+          <Link
+            href="/"
+            className={`fn-mobile-cat-link ${!activeCategory ? "active" : ""}`}
+          >
+            Home
+          </Link>
+          {categories.map((cat) => {
+            const isActive =
+              activeCategory?.toLowerCase() === cat.slug ||
+              (activeCategory?.toLowerCase() === "tech" && cat.slug === "technology");
+            return (
+              <Link
+                key={cat.slug}
+                href={`/${cat.slug}`}
+                className={`fn-mobile-cat-link ${isActive ? "active" : ""}`}
+              >
+                {cat.label}
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+
+      {/* ── MOBILE MENU DRAWER ── */}
+      {mobileMenuOpen && (
+        <div className="fn-mobile-menu-overlay" onClick={closeMobileMenu} />
+      )}
+      <div className={`fn-mobile-menu-drawer ${mobileMenuOpen ? "is-open" : ""}`}>
+        <div className="fn-mobile-menu-header">
+          <span className="fn-mobile-menu-title">Menu</span>
+          <button className="fn-mobile-menu-close" onClick={closeMobileMenu} aria-label="Close menu">
+            ✕
+          </button>
+        </div>
+
+        {/* Main Nav Links */}
+        <nav className="fn-mobile-nav">
+          <Link href="/" className={`fn-mobile-nav-link ${!activeCategory ? "active" : ""}`} onClick={closeMobileMenu}>
+            Home
+          </Link>
+          {categories.map((cat) => {
+            const isActive =
+              activeCategory?.toLowerCase() === cat.slug ||
+              (activeCategory?.toLowerCase() === "tech" && cat.slug === "technology");
+            return (
+              <Link
+                key={cat.slug}
+                href={`/${cat.slug}`}
+                className={`fn-mobile-nav-link ${isActive ? "active" : ""}`}
+                onClick={closeMobileMenu}
+              >
+                {cat.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Divider */}
+        <div className="fn-mobile-menu-divider" />
+
+        {/* Secondary Links — About Us etc */}
+        <nav className="fn-mobile-secondary-nav">
+          <Link href="/about-us" className="fn-mobile-secondary-link" onClick={closeMobileMenu}>About Us</Link>
+          <Link href="/contact" className="fn-mobile-secondary-link" onClick={closeMobileMenu}>Contact</Link>
+          <Link href="/our-team" className="fn-mobile-secondary-link" onClick={closeMobileMenu}>Our Team</Link>
+          <Link href="/privacy-policy" className="fn-mobile-secondary-link" onClick={closeMobileMenu}>Privacy Policy</Link>
+        </nav>
       </div>
     </header>
   );

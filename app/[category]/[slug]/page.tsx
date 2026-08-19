@@ -66,23 +66,10 @@ export default function ArticleDetailPage({ params }: DetailPageProps) {
               </div>
 
               <div className="fn-art-meta-details">
-                <span>{article.date}</span>
-                <span>·</span>
-                <span>5 min read</span>
-                <span>·</span>
-                <div className="fn-art-share-bar">
-                  <button className="fn-art-share-btn" aria-label="Share story">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13" />
-                    </svg>
-                    Share
-                  </button>
-                  <button className="fn-art-share-btn" aria-label="Bookmark story">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-                    </svg>
-                    Save
-                  </button>
+                <div className="fn-art-time-box">
+                  <span>{article.date}</span>
+                  <span className="fn-art-time-dot">·</span>
+                  <span>5 min read</span>
                 </div>
               </div>
             </div>
